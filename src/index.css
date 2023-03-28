@@ -1,0 +1,47 @@
+element {
+  --main-palladium-color: #86c5d8;
+  --dark-palladium-color: #afdceb;
+  --main-palladium-white: #d0dce8;
+  --main-palladium-lightgrey: #656565;
+}
+
+.main-pal-color {
+  color: #86c5d8;
+}
+
+* {
+  text-decoration: none !important;
+  color: var(--main-palladium-white);
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family: "Poppins", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+    Noto Color Emoji;
+}
+
+body {
+  box-sizing: border-box;
+
+  /* background-image: url("assets/bg2.jpg"); */
+  background: radial-gradient(circle at 50% 80%, #0e101a, #0f0f1c);
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-position: 50%;
+  background-position-x: 50%;
+  background-position-y: center;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  line-height: inherit;
+}

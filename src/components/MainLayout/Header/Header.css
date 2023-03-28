@@ -1,0 +1,19 @@
+.header {
+  padding-top: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.header__price {
+  margin: 1rem 1rem;
+  color: #656565;
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding-top: 70px;
+  }
+}

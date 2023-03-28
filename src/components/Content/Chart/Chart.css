@@ -1,0 +1,26 @@
+#dexscreener-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+#dexscreener-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+}
+
+.chart-iframe {
+  border-radius: 15px;
+}
+
+@media (min-width: 988px) {
+  .chart-iframe {
+    max-height: 850px;
+  }
+}
+
+.chart-container {
+  max-height: 950px;
+}

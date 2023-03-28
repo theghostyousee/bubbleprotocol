@@ -1,0 +1,50 @@
+.tile-nomargin {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  background: rgba(19, 24, 35, 0.3411764705882353);
+  -webkit-backdrop-filter: blur(33px);
+  backdrop-filter: blur(33px);
+  border-radius: 12px;
+  border: 1px solid rgba(19, 207, 207, 0.06666666666666667);
+  padding: 20px;
+  margin: 0 20px;
+  margin-bottom: 30px;
+}
+
+.tile {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  margin: 20px 10px;
+  background: rgba(19, 24, 35, 0.3411764705882353);
+  -webkit-backdrop-filter: blur(33px);
+  backdrop-filter: blur(33px);
+  border-radius: 12px;
+  border: 1px solid rgba(19, 207, 207, 0.06666666666666667);
+  padding: 20px;
+}
+
+/* CARD BACKGROUNDS */
+.tile:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.black {
+  color: #d0dce8;
+}
+
+.gray {
+  /*color: #D0DCE8B2;*/
+  color: #86c5d8;
+}
+
+.accentuate {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.v-center {
+  position: absolute;
+  top: 50%; /* poussé de la moitié de hauteur du référent */
+  transform: translate(50%) translateY(-50%);
+}

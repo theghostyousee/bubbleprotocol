@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+
+$th_palladium_green: #86c5d8;
+$th_dark: #656565;
+
+main {
+  min-width: 200px;
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 10px;
+
+  .wrap {
+    padding: 40px 20px;
+    background-color: #d0dce8;
+    //box-shadow:0 0 10px 2px rgba(0,0,0,.2);
+  }
+
+  .title {
+    font-size: 2em;
+    text-align: center;
+    margin: 20px auto 40px;
+    text-transform: uppercase;
+  }
+}
+
+header {
+  z-index: 4;
+  nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      top: 170px;
+      transition: all 0.3s ease-in-out;
+      transform: translateX(-50%);
+
+      li {
+        transform: translateY(50px);
+        opacity: 0;
+
+        a {
+          display: block;
+          font-size: 2em;
+          text-decoration: none;
+          padding: 10px 0;
+          text-align: center;
+          color: #d0dce8;
+          font-weight: bold;
+          transition: all 0.2s ease-in-out;
+          //text-shadow:1px 1px 2px rgba(0,0,0,.5);
+
+          &:hover {
+            color: $th_palladium_green;
+          }
+        }
+      }
+    }
+  }
+}
+
+.toggle-btn {
+  display: block;
+  position: fixed;
+  z-index: 3;
+  left: 20px;
+  top: 30px;
+  cursor: pointer;
+
+  .bar {
+    width: 30px;
+    height: 2px;
+    margin: 7px auto;
+    background-color: $th_dark;
+    transition: all 0.3s ease-in-out;
+    //box-shadow:0 0 3px 1px rgba(0,0,0,.3);
+
+    &:nth-child(2) {
+      width: 20px;
+    }
+  }
+}
+
+#toggle:checked {
+  & ~ nav {
+    opacity: 1;
+    visibility: visible;
+
+    ul {
+      top: 70px;
+
+      li {
+        transform: translateY(0px);
+        opacity: 1;
+
+        @for $i from 1 through 4 {
+          $t: $i * 0.1;
+          &:nth-child(#{$i}) {
+            transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) #{$t}s;
+          }
+        }
+      }
+    }
+  }
+
+  & + label.toggle-btn {
+    .bar {
+      background-color: $th_palladium_green;
+
+      &:nth-child(2) {
+        transform: translateX(50px);
+        opacity: 0;
+      }
+
+      &:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+}
